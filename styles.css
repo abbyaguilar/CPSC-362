@@ -1,6 +1,105 @@
+body {
+    background-color: #6d6d6d;
+    position: relative;
+    padding-top: 100px;
+    color: #6d6d6d;
+    margin: 0;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+}
+
 h1 {
-  font-family: 'Butcherman', cursive;
+    color: #000000;
+    font-size: 5.625rem;
+    margin-top: 50px auto 0 auto;
+    font-family: 'Sacramento';
 }
+
 h2 {
-  font-family: 'IM Fell English SC', serif;
+    color: #000000;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
 }
+
+p {
+    line-height: 2;
+}
+
+hr {
+    border-style: none;
+    border-top-style: dotted;
+    border-color: grey;
+    border-width: 5px;
+    width: 5%;
+}
+
+img {
+    position: relative;
+    left: 100px;
+}
+
+a {
+    color: #11999E;
+    font-family: 'Montserrat', sans-serif;
+    margin: 10px 20px;
+    text-decoration: none;
+}
+
+    a:hover {
+        color: #EAF6F6;
+    }
+
+.coder-img {
+    width: 25%;
+    float: left;
+    margin-right: 130px;
+}
+
+.tarot-reader-img {
+    width: 25%;
+    float: right;
+    margin-right: 200px;
+}
+
+.profile {
+    width: 50%;
+    margin: 100px auto 100px auto;
+}
+
+.top-cloud {
+    position: absolute;
+    left: 600px;
+    top: 50px;
+}
+
+.bottom-cloud {
+    position: absolute;
+    left: 1111px;
+    bottom: 300px;
+}
+
+.code-img {
+    width: 25;
+    float: left;
+    margin-right: 30px;
+}
+
+
+.btn {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0px;
+    text-shadow: 1px 1px 13px #000000;
+    font-family: Georgia;
+    color: #000000;
+    font-size: 15px;
+    background: #898989;
+    padding: 10px 40px 10px 40px;
+    border: solid #000000 1px;
+    text-decoration: none;
+}
+
+    .btn:hover {
+        background: #000000;
+        text-decoration: none;
+    }

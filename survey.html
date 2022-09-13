@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<HEAD>
+    <meta charset="utf-8" />
+    <title>Death Predictor</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="address" href="address.js" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Butcherman&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+</HEAD>
+<BODY>
+    <div class="top-container" style="line-height:10px">
+        <h1>WHEN WILL YOU DIE?</h1>
+        <div class="name">
+            <h2>Death Predictor</h2>
+        </div>
+    </div>
+    <div class="middle-container" style="line-height:1px">
+
+        <form id="form">
+            <div class="name-block">
+                <center>
+                    <label for="name" id="label-name">
+                        <h3>full name</h3>
+                    </label>
+                    <input type="text"
+                           id="name"
+                           placeholder=" " />
+                </center>
+            </div>
+
+            <div class="birthdate-block">
+                <center>
+                    <label for="birthdate"><h3>day of birth</h3></label>
+
+                    <input type="date" id="birthdate" name="birth-date"
+                           value="2022-09-10"
+                           min="1900-01-01" max="2100-12-31">
+                </center>
+            </div>
+
+            <div class="location-block">
+                <center>
+
+                    <label for="birthdate"><h3>location</h3></label>
+                    <div class="form-group">
+                        <input type="state"
+                               class="form-control"
+                               id="inputState"
+                               placeholder="State">
+                        <input type="zip"
+                               class="form-control"
+                               id="inputZip"
+                               placeholder="Zip">
+                    </div>
+                </center>
+            </div>
+
+            <div class="bmi-block">
+                <center>
+                    <label for="bmi"> <h3>height and weight</h3></label>
+                    <div class="bmi">
+                        <input type="weight"
+                               class="form-control"
+                               id="inputWeight"
+                               placeholder="Weight(lbs)">
+                        <input type="height"
+                               class="form-control"
+                               id="inputHeight"
+                               placeholder="Height(in)">
+
+                    </div>
+                </center>
+            </div>
+
+        </form>
+
+    </div>
+    <div class="bottom-container" style="line-height:1px">
+        <div class="next">
+            <h3>NEXT</h3>
+        </div>
+        <div class="arrow">
+            <a href="surveycontinued.html">
+                <img src="images/next.png">
+            </a>
+        </div>
+    </div>
+
+</BODY>
+</html>
+
+
+
+

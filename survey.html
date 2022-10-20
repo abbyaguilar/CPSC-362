@@ -29,6 +29,9 @@
                     <input type="text"
                            id="name"
                            placeholder=" " />
+                    <script>
+                        document.getElementById("name").value = userName;
+                    </script>
                 </center>
             </div>
 
@@ -40,6 +43,10 @@
                            value="2022-09-10"
                            min="1900-01-01" max="2100-12-31">
                 </center>
+
+                <script>
+                    document.getElementById("birthdate").value = birthdate;
+                </script>
             </div>
 
             <div class="location-block">
@@ -47,11 +54,11 @@
 
                     <label for="birthdate"><h3>location</h3></label>
                     <div class="form-group">
-                        <input type="state"
+                        <input type="text"
                                class="form-control"
                                id="inputState"
                                placeholder="State">
-                        <input type="zip"
+                        <input type="number"
                                class="form-control"
                                id="inputZip"
                                placeholder="Zip">
@@ -63,20 +70,25 @@
                 <center>
                     <label for="bmi"> <h3>height and weight</h3></label>
                     <div class="bmi">
-                        <input type="weight"
+                        <input type="number"
                                class="form-control"
                                id="inputWeight"
                                placeholder="Weight(lbs)">
-                        <input type="height"
+                        <input type="number"
                                class="form-control"
                                id="inputHeight"
                                placeholder="Height(in)">
 
+                        <script>
+                            document.getElementById("inputWeight").value = weight;
+                            document.getElementById("inputHeight").value = height;
+                        </script>
                     </div>
                 </center>
             </div>
 
         </form>
+
 
         <script>
             function myFunction() {
@@ -92,6 +104,5 @@
 
 </BODY>
 </html>
-
 
 

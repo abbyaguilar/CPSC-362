@@ -82,6 +82,11 @@
                         <script>
                             document.getElementById("inputWeight").value = weight;
                             document.getElementById("inputHeight").value = height;
+                            let bmi = (weight / (height * height)) * 703;
+                            if (bmi < 18.5 || bmi > 30)
+                                {
+                                let flag = 1;
+                             }
                         </script>
                     </div>
                 </center>
@@ -104,5 +109,7 @@
 
 </BODY>
 </html>
+
+
 
 

@@ -16,9 +16,10 @@
         <center>
             <h1>YOU WILL DIE AT</h1>
             <div class="death-age">
-                100 YEARS OLD
+                <h1 id="death-age"></h1>
             </div>
-            <h1>on December 20 2021</h1>
+<!--            <h1>on December 20 2021</h1>-->
+<!--            <h1 id="location"></h1>-->
         </center>
     </div>
 
@@ -29,5 +30,41 @@
         </center>
     </div>
 </body>
+
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var x = "Your current location is HELL ";
+        var name = localStorage.getItem("name");
+        var date = localStorage.getItem("date");
+        console.log("date: " + date);
+        var weight = parseFloat(localStorage.getItem("weight"));
+        var kilograms = weight * 0.453592;
+        var height = parseFloat(localStorage.getItem("height"));
+        var height = height * 0.0254;
+        var height_squared = Math.pow(height, 2);
+        var bmi = kilograms / height_squared;
+        // var dateDate = Date.parse(date);
+        var year = date.split("-")[0];
+        console.log("year " + year);
+        var month = date.split("-")[1];
+        console.log("month " + month);
+        var day = date.split("-")[2];
+        console.log("day " + day);
+        // console.log("dateDate " + dateDate);
+        var diedate = new Date();
+        // console.log("die date: " + diedate);
+        var years = Math.round(60 + bmi);
+        var yearstime = parseInt(year) + parseInt(years);
+
+        diedate.setFullYear(yearstime);
+        diedate.setMonth(month);
+        diedate.setDate(day);
+        console.log("diedate " + diedate);
+        document.getElementById("death-age").innerHTML = name + " will die at " + Math.round(60 + bmi) + " years old on " + diedate + ".";
+
+    });
+</script>
 
 </html>

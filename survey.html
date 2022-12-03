@@ -28,9 +28,15 @@
                     </label>
                     <input type="text"
                            id="name"
-                           placeholder=" " />
+                           placeholder=" "
+                           onkeyup="set_name()"
+                    />
                     <script>
-                        document.getElementById("name").value = userName;
+                        function set_name() {
+                            const val = document.querySelector('#name').value;
+                            console.log(val);
+                            localStorage.setItem("name", val);
+                        }
                     </script>
                 </center>
             </div>
@@ -41,11 +47,17 @@
 
                     <input type="date" id="birthdate" name="birth-date"
                            value="2022-09-10"
-                           min="1900-01-01" max="2100-12-31">
+                           min="1900-01-01" max="2100-12-31"
+                           onkeyup="set_date()"
+                    >
                 </center>
 
                 <script>
-                    document.getElementById("birthdate").value = birthdate;
+                    function set_date() {
+                        const val = document.querySelector('#birthdate').value;
+                        console.log(val);
+                        localStorage.setItem("date", val);
+                    }
                 </script>
             </div>
 
@@ -73,21 +85,44 @@
                         <input type="number"
                                class="form-control"
                                id="inputWeight"
-                               placeholder="Weight(lbs)">
+                               placeholder="Weight(lbs)"
+                               onkeyup="set_weight()"
+                        >
+
+                        <script>
+                            function set_weight() {
+                                const val = document.querySelector('#inputWeight').value;
+                                console.log(val);
+                                localStorage.setItem("weight", val);
+                            }
+                        </script>
+
                         <input type="number"
                                class="form-control"
                                id="inputHeight"
-                               placeholder="Height(in)">
+                               placeholder="Height(in)"
+                               onkeyup="set_height()"
+                        >
 
                         <script>
-                            document.getElementById("inputWeight").value = weight;
-                            document.getElementById("inputHeight").value = height;
-                            let bmi = (weight / (height * height)) * 703;
-                            if (bmi < 18.5 || bmi > 30)
-                                {
-                                let flag = 1;
-                             }
+                            function set_height() {
+                                const val = document.querySelector('#inputHeight').value;
+                                console.log(val);
+                                localStorage.setItem("height", val);
+                            }
                         </script>
+
+
+<!--                        <script>-->
+<!--                            document.getElementById("inputWeight").value = inputWeight;-->
+<!--                            document.getElementById("inputHeight").value = inputHeight;-->
+<!--                            let bmi = (weight / (height * height)) * 703;-->
+<!--                            if (bmi < 18.5 || bmi > 30)-->
+<!--                                {-->
+<!--                                let flag = 1;-->
+<!--                             }-->
+<!--                        </script>-->
+
                     </div>
                 </center>
             </div>
@@ -95,11 +130,13 @@
         </form>
 
 
-        <script>
-            function myFunction() {
-                document.getElementById("form").submit();
-            }
-        </script>
+<!--        <script>-->
+<!--            function myFunction() {-->
+<!--                console.log("survey form submit clicked")-->
+<!--                document.getElementById("form").submit();-->
+<!--                localStorage.setItem("storageName", "hi");-->
+<!--            }-->
+<!--        </script>-->
 
     </div>
 
@@ -108,6 +145,15 @@
     </div>
 
 </BODY>
+
+
+
+<!--<script>-->
+<!--    window.onload = function() {-->
+<!--        localStorage.setItem("storageName","hello");-->
+<!--    }-->
+<!--</script>-->
+
 </html>
 
 
